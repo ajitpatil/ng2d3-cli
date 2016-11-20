@@ -1,0 +1,323 @@
+@import "../shared/tooltip/tooltip.scss";
+
+.ng2d3 {
+  float: left;
+
+  .bar,
+  .cell,
+  .arc,
+  .card {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .area {
+    opacity: 0.6;
+  }
+
+  .circle {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .tree-map {
+    .label p {
+      display: table-cell;
+      text-align: center;
+      line-height: 1.2em;
+      vertical-align: middle;
+    }
+  }
+}
+
+.label {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.gridline-path {
+  stroke: #ddd;
+  stroke-width: 1;
+  fill: none;
+}
+
+.grid-panel {
+  rect {
+    fill: none;
+  }
+
+  &.odd {
+    rect {
+      fill: rgba(0,0,0,0.05);
+    }
+  }
+}
+
+.a2d3-container {
+  height: 100%;
+
+  .status-message {
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    top: 43%;
+    color: #999;
+  }
+
+  .icon-loading {
+    color: #999;
+    font-size: 32px;
+  }
+}
+
+.timeline {
+  .brush {
+    .overlay {
+      fill: rgba(0,0,0,0.05);
+    }
+
+    .selection {
+      fill: rgba(0, 0, 0, 0.1);
+      stroke-width: 1px;
+      stroke-dasharray: 10,5;
+      stroke: #888888;
+    }
+
+    .handle {
+      fill-opacity: 0;
+    }
+  }
+
+  .embedded-chart {
+    opacity: 0.6;
+  }
+}
+
+.tooltip-item{
+  text-align: left;
+  line-height: 1.2em;
+
+  .tooltip-item-color {
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    margin-right: 5px;
+    color: #5b646b;
+    border-radius: 3px;
+  }
+}
+
+.legend {
+  display: inline-block;
+  padding: 0;
+
+  .legend-title {
+    color: #76818a;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .legend-wrap {
+    width: 90%;
+  }
+
+  .scale-legend {
+    text-align: center;
+  }
+
+  .scale-legend-wrap {
+    display: inline-block;
+    height: 100%;
+    width: 30px;
+    border-radius: 5px;
+  }
+
+  .scale-legend-label{
+      font-size: 12px;
+  }
+
+  .legend-labels {
+    line-height: 85%;
+    list-style: none;
+    text-align: left;
+    float: left;
+    width: 100%;
+    border-radius: 3px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: rgba(0,0,0,0.05);
+  }
+
+  .legend-label {
+    cursor: pointer;
+    font-size: 90%;
+    margin: 8px;
+    color: #76818a;
+
+    &.active {
+      color: #FFF;
+    }
+  }
+
+  .legend-label-color {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+    color: #5b646b;
+    border-radius: 3px;
+  }
+
+  .legend-label-text {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 15px;
+    font-size: 12px;
+    width: 100%;
+    text-overflow: ellipsis;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 20px;
+  }
+
+  .legend-icon {
+    color: #4d9df6;
+    margin-right: 5px;
+  }
+
+  .legend-title-text {
+    vertical-align: bottom;
+    display: inline-block;
+    line-height: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.advanced-pie {
+  display: inline-block;
+  float: left;
+}
+
+.advanced-pie-legend-wrapper {
+  display: inline-block;
+}
+
+.advanced-pie-legend {
+  float: left;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  .total-value {
+    font-size: 36px
+  }
+
+  .total-label {
+    font-size: 24px;
+    margin-bottom: 19px;
+  }
+
+  .legend-items-container {
+    width: 100%;
+
+    .legend-items {
+      white-space: nowrap;
+      overflow: auto;
+
+      .legend-item {
+        margin-right: 20px;
+        display: inline-block;
+
+        .item-value {
+          font-size: 24px;
+          margin-top: -6px;
+          margin-left: 11px;
+        }
+
+        .item-label {
+          font-size: 12px;
+          opacity: 0.7;
+          margin-left: 11px;
+          margin-top: -6px;
+        }
+
+        .item-percent {
+          font-size: 24px;
+          opacity: 0.7;
+          margin-left: 11px;
+        }
+
+        .item-color {
+          width: 4px;
+          height: 32px;
+          float: left;
+          margin-right: 7px;
+        }
+      }
+    }
+  }
+}
+
+.pie-grid {
+  .arc1 {
+    opacity: 0.4;
+  }
+}
+
+.force-directed-graph {
+  .edge {
+    stroke: #333;
+  }
+}
+
+.gauge {
+  .background-arc {
+    path {
+      fill: rgba(0,0,0,0.05);
+    }
+  }
+
+  text {
+  }
+
+  .gauge-tick {
+    path {
+      stroke: #999;
+    }
+
+    text {
+      font-size: 12px;
+      fill: #999;
+      font-weight: bold;
+    }
+
+    &.highlighted {
+      path {
+        stroke: #666;
+      }
+
+      text {
+        fill: #666;
+      }
+    }
+  }
+  .gauge-tick-large path {
+    stroke-width: 2px;
+  }
+  .gauge-tick-small path{
+    stroke-width: 1px;
+  }
+}
